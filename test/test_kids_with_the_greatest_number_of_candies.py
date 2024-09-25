@@ -14,5 +14,4 @@ class TestSolution(unittest.TestCase):
         self.assertEqual(result, [True,False,False,False,False])
 
         result = self.solution.kidsWithCandies([12,1,12], 10)
-        self.assertEqual(result, [True,False,True]
-)
+        self.assertEqual(result, [True,False,True])
