@@ -1,6 +1,6 @@
 import unittest
 
-from slidingWindow.maximun_average_subarray_i import Solution
+from sliding_window.maximun_average_subarray_i import Solution
 
 class TestMaximunAverageSubarrayI(unittest.TestCase):
     def setUp(self):
