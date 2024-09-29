@@ -4,7 +4,7 @@ from arrays.kids_with_the_greatest_number_of_candies import Solution
 
 class TestSolution(unittest.TestCase):
     def setUp(self):
-        self.solution = Solution() 
+        self.solution = Solution()
 
     def test_kids_with_candies(self):
         result = self.solution.kidsWithCandies([2,3,5,1,3], 3)

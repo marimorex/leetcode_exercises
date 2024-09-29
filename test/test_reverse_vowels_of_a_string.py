@@ -5,7 +5,7 @@ from strings.reverse_vowels_of_a_string import Solution
 
 class TestSolution(unittest.TestCase):
     def setUp(self):
-        self.solution = Solution() 
+        self.solution = Solution()
 
     def test_a_is_vowel(self):
         result = self.solution.isVowel('a')
@@ -17,7 +17,7 @@ class TestSolution(unittest.TestCase):
     def test_i_is_vowel(self):
         result = self.solution.isVowel('I')
         self.assertEqual(result, True)
-        
+
         result = self.solution.isVowel('i')
         self.assertEqual(result, True)
 
@@ -35,12 +35,12 @@ class TestSolution(unittest.TestCase):
         result = self.solution.isVowel('z')
         self.assertEqual(result, False)
 
-    
+
     def test_reverse_vowels_IceCreAm(self):
         result = self.solution.reverseVowels("IceCreAm")
         self.assertEqual(result, "AceCreIm")
 
-    
+
     def test_reverse_vowels_leetcode(self):
         result = self.solution.reverseVowels("leetcode")
         self.assertEqual(result, "leotcede")

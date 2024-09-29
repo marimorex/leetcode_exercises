@@ -14,28 +14,28 @@ The vowels in s are ['I', 'e', 'e', 'A']. On reversing the vowels, s becomes "Ac
 Example 2:
 Input: s = "leetcode"
 Output: "leotcede"
-''' 
+'''
 class Solution:
     def isVowel(self, s:str) -> bool:
-        if s in ['a','e','i','o','u','A','E','I','O','U']: 
+        if s in ['a','e','i','o','u','A','E','I','O','U']:
             return True
         return False
 
     def reverseVowels(self, s: str) -> str:
         reversed_vowels = list(s)
-        left = 0 
+        left = 0
         right = len(s)-1
 
 
         while left<right:
-            if not self.isVowel(reversed_vowels[left]): 
+            if not self.isVowel(reversed_vowels[left]):
                 left+=1
                 continue
-        
-            if not self.isVowel(reversed_vowels[right]): 
+
+            if not self.isVowel(reversed_vowels[right]):
                 right-=1
                 continue
-            
+
             left_temp = reversed_vowels[left]
             reversed_vowels[left] = reversed_vowels[right]
             reversed_vowels[right] = left_temp

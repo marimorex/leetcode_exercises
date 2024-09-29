@@ -2,8 +2,8 @@
     LeetCode Exercise URL : https://leetcode.com/problems/merge-strings-alternately
 
     Description :
-    You are given two strings word1 and word2. 
-    Merge the strings by adding letters in alternating order, starting with word1. 
+    You are given two strings word1 and word2.
+    Merge the strings by adding letters in alternating order, starting with word1.
     If a string is longer than the other, append the additional letters onto the end of the merged string.
 
     Return the merged string.
@@ -21,7 +21,7 @@
     Input: word1 = "ab", word2 = "pqrs"
     Output: "apbqrs"
     Explanation: Notice that as word2 is longer, "rs" is appended to the end.
-    word1:  a   b 
+    word1:  a   b
     word2:    p   q   r   s
     merged: a p b q   r   s
     Example 3:
@@ -30,9 +30,9 @@
     Output: "apbqcd"
     Explanation: Notice that as word1 is longer, "cd" is appended to the end.
     word1:  a   b   c   d
-    word2:    p   q 
+    word2:    p   q
     merged: a p b q c   d
-    
+
 
     Constraints:
 
@@ -54,10 +54,10 @@ class Solution:
             for i in range(word2_len):
                 merged += word1[i] + word2[i]
             merged += word1[word2_len:]
-        
+
         elif(word1_len < word2_len):
             for i in range(word1_len):
                 merged += word1[i] + word2[i]
             merged += word2[word1_len:]
-        
+
         return merged
