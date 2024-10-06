@@ -1,4 +1,4 @@
-'''
+"""
 LeetCode Exercise URL : https://leetcode.com/problems/can-place-flowers
 
 Description :
@@ -17,9 +17,10 @@ Example 2:
 Input: flowerbed = [1,0,0,0,1], n = 2
 Output: false
 
-'''
+"""
 
 from typing import List
+
 
 class Solution:
     def canPlaceFlowers(self, flowerbed: List[int], n: int) -> bool:
@@ -28,11 +29,16 @@ class Solution:
         flowerbed_updated = [0] + flowerbed + [0]
         planted = 0
 
-        if n==0 : return True
+        if n == 0:
+            return True
 
-        for i in range(1,len(flowerbed_updated)-1):
-            if flowerbed_updated[i-1]==0 and flowerbed_updated[i]==0 and flowerbed_updated[i+1] ==0:
-                flowerbed_updated[i]=1
-                planted+=1
+        for i in range(1, len(flowerbed_updated) - 1):
+            if (
+                flowerbed_updated[i - 1] == 0
+                and flowerbed_updated[i] == 0
+                and flowerbed_updated[i + 1] == 0
+            ):
+                flowerbed_updated[i] = 1
+                planted += 1
 
         return planted >= n

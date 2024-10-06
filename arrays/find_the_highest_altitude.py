@@ -1,4 +1,4 @@
-'''
+"""
 LeetCode Exercise URL : https://leetcode.com/problems/find-the-highest-altitude
 
 There is a biker going on a road trip.
@@ -20,8 +20,9 @@ Input: gain = [-4,-3,-2,-1,4,3,2]
 Output: 0
 Explanation: The altitudes are [0,-4,-7,-9,-10,-6,-3,-1]. The highest is 0.
 
-'''
+"""
 from typing import List
+
 
 class Solution:
     def largestAltitude(self, gain: List[int]) -> int:
@@ -29,7 +30,7 @@ class Solution:
         highest_altitude = 0
 
         for g in gain:
-            current_altitude+=g
-            highest_altitude = max(highest_altitude,current_altitude)
+            current_altitude += g
+            highest_altitude = max(highest_altitude, current_altitude)
 
         return highest_altitude

@@ -1,4 +1,4 @@
-'''
+"""
 You have a RecentCounter class which counts the number of recent requests within a certain time frame.
 
 Implement the RecentCounter class:
@@ -24,19 +24,19 @@ recentCounter.ping(100);   // requests = [1, 100], range is [-2900,100], return 
 recentCounter.ping(3001);  // requests = [1, 100, 3001], range is [1,3001], return 3
 recentCounter.ping(3002);  // requests = [1, 100, 3001, 3002], range is [2,3002], return 3
 
-'''
+"""
 from collections import deque
 
-class RecentCounter:
 
+class RecentCounter:
     def __init__(self):
         self.queue = deque()
 
     def ping(self, t: int) -> int:
-        low_range = t-3000
+        low_range = t - 3000
         self.queue.append(t)
 
-        while (len(self.queue)>0 and self.queue[0]< low_range):
+        while len(self.queue) > 0 and self.queue[0] < low_range:
             self.queue.popleft()
 
         return len(self.queue)

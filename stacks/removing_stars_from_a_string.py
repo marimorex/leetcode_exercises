@@ -1,4 +1,4 @@
-'''
+"""
 LeetCode Exercise URL :
 
 You are given a string s, which contains stars *.
@@ -28,8 +28,9 @@ Example 2:
 Input: s = "erase*****"
 Output: ""
 Explanation: The entire string is removed, so we return an empty string.
-'''
+"""
 from collections import deque
+
 
 class Solution:
     # usign a stack
@@ -38,23 +39,22 @@ class Solution:
         stack = deque()
 
         for character in s:
-            if(character == '*'):
-                if len(stack)>0:
+            if character == "*":
+                if len(stack) > 0:
                     stack.pop()
             else:
                 stack.append(character)
 
         return result.join(stack)
 
-
     # more slow
     def removeStars_without_stack(self, s: str) -> str:
         result = []
         for i in range(len(s)):
-            if(s[i] != '*'):
-               result.append(s[i])
+            if s[i] != "*":
+                result.append(s[i])
             else:
-                if len(result)>0:
+                if len(result) > 0:
                     result.pop()
 
-        return ''.join(result)
+        return "".join(result)

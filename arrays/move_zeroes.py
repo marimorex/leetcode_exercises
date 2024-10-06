@@ -1,4 +1,4 @@
-'''
+"""
 LeetCode Exercise URL : https://leetcode.com/problems/move-zeroes/
 
 Given an integer array nums, move all 0's to the end of it
@@ -15,7 +15,7 @@ Example 2:
 Input: nums = [0]
 Output: [0]
 
-'''
+"""
 
 from typing import List
 
@@ -29,14 +29,13 @@ class Solution:
 
         for i in range(len(nums)):
             num = nums[i]
-            if(num==0):
+            if num == 0:
                 # store the zero position
                 zeros.append(i)
             else:
                 # check if we can swapp if we have available zeroes
-                if(len(zeros)>0):
-                   nums[zeros.pop(0)] = num
-                   nums[i] = 0
-                   zeros.append(i)
+                if len(zeros) > 0:
+                    nums[zeros.pop(0)] = num
+                    nums[i] = 0
+                    zeros.append(i)
         return nums
-

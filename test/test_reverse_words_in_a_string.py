@@ -2,6 +2,7 @@ import unittest
 
 from strings.reverse_words_in_a_string import Solution
 
+
 class TestReverseWordsInAString(unittest.TestCase):
     def setUp(self):
         self.solution = Solution()

@@ -1,4 +1,4 @@
-'''
+"""
     LeetCode Exercise URL : https://leetcode.com/problems/merge-strings-alternately
 
     Description :
@@ -38,7 +38,8 @@
 
     1 <= word1.length, word2.length <= 100
     word1 and word2 consist of lowercase English letters.
-'''
+"""
+
 
 class Solution:
     def mergeAlternately(self, word1: str, word2: str) -> str:
@@ -46,16 +47,16 @@ class Solution:
         word2_len = len(word2)
         merged = ""
 
-        if(word1_len == word2_len):
+        if word1_len == word2_len:
             for i in range(word1_len):
                 merged += word1[i] + word2[i]
 
-        elif(word1_len > word2_len):
+        elif word1_len > word2_len:
             for i in range(word2_len):
                 merged += word1[i] + word2[i]
             merged += word1[word2_len:]
 
-        elif(word1_len < word2_len):
+        elif word1_len < word2_len:
             for i in range(word1_len):
                 merged += word1[i] + word2[i]
             merged += word2[word1_len:]

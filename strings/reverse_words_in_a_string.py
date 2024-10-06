@@ -1,4 +1,4 @@
-'''
+"""
 LeetCode Exercise URL : https://leetcode.com/problems/reverse-words-in-a-string
 Description :
 Given an input string s, reverse the order of the words.
@@ -27,13 +27,15 @@ Input: s = "a good   example"
 Output: "example good a"
 Explanation: You need to reduce multiple spaces between two words to a single space in the reversed string.
 
-'''
+"""
+
+
 class Solution:
     def reverseWords(self, s: str) -> str:
         words = s.strip().split(" ")
         reverse = ""
 
-        for i in range(len(words)-1, -1, -1):
+        for i in range(len(words) - 1, -1, -1):
             if words[i] != "":
                 reverse = reverse + " " + words[i]
 

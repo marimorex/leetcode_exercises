@@ -1,4 +1,4 @@
-'''
+"""
 LeetCode Exercise URL : https://leetcode.com/problems/find-the-difference-of-two-arrays/
 
 Given two 0-indexed integer arrays nums1 and nums2, return a list answer of size 2 where:
@@ -22,14 +22,14 @@ Explanation:
 For nums1, nums1[2] and nums1[3] are not present in nums2. Since nums1[2] == nums1[3], their value is only included once and answer[0] = [3].
 Every integer in nums2 is present in nums1. Therefore, answer[1] = [].
 
-'''
+"""
 
 from typing import List
 
 
 class Solution:
     def findDifference(self, nums1: List[int], nums2: List[int]) -> List[List[int]]:
-        answer = [[],[]]
+        answer = [[], []]
         set1, set2 = set(), set()
 
         for i in range(len(nums1)):
@@ -38,7 +38,7 @@ class Solution:
         for x in range(len(nums2)):
             set2.add(nums2[x])
 
-        answer[0] = list(set1-set2)
-        answer[1] = list(set2-set1)
+        answer[0] = list(set1 - set2)
+        answer[1] = list(set2 - set1)
 
         return answer

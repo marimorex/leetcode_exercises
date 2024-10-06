@@ -1,6 +1,7 @@
 import unittest
 from stacks.removing_stars_from_a_string import Solution
 
+
 class TestRemovingStarsFromAString(unittest.TestCase):
     def setUp(self):
         self.solution = Solution()
@@ -11,7 +12,6 @@ class TestRemovingStarsFromAString(unittest.TestCase):
 
         result = self.solution.removeStars("erase*****")
         self.assertEqual(result, "")
-
 
     def test_removing_stars_from_a_string_empty(self):
         result = self.solution.removeStars("***")

@@ -1,6 +1,6 @@
 from typing import List
 
-'''
+"""
 LeetCode Exercise URL : https://leetcode.com/problems/kids-with-the-greatest-number-of-candies
 
 Description :
@@ -35,11 +35,12 @@ Example 3:
 Input: candies = [12,1,12], extraCandies = 10
 Output: [true,false,true]
 
-'''
+"""
+
 
 class Solution:
     def kidsWithCandies(self, candies: List[int], extraCandies: int) -> List[bool]:
-        result=[]
+        result = []
         max_candies = max(candies)
 
         for c in candies:
